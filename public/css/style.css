@@ -1,0 +1,894 @@
+@font-face {
+  font-family: montserrat;
+  src: url('../fonts/Montserrat-Light.ttf');
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-input-placeholder {
+  color: #4183D7;
+}
+.mainContainer {
+  height: 100%;
+  width: 100%;
+  font-family: montserrat;
+}
+.mainContainer .menu {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 6rem;
+  background: #2f323a;
+}
+.mainContainer .menu .logo {
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  background: #2980b9;
+}
+.mainContainer .menu .logo .headerLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4rem;
+  width: 4rem;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .menu .optionsContainer {
+  position: absolute;
+  top: 15rem;
+  width: 100%;
+  height: auto;
+}
+.mainContainer .menu .optionsContainer .optionLogo {
+  position: relative;
+  width: 4rem;
+  margin: 1rem;
+}
+.mainContainer .menu .footerLogo {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 6rem;
+}
+.mainContainer .guestContainer {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  left: 6rem;
+}
+.mainContainer .guestContainer .header {
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  background: white;
+  border-bottom: 1px solid #d8d9da;
+  box-sizing: border-box;
+}
+.mainContainer .guestContainer .header .productName {
+  position: relative;
+  float: left;
+  margin-left: 3.5rem;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  line-height: 6rem;
+  font-size: 1.5rem;
+  color: royalblue;
+}
+.mainContainer .guestContainer .header .plusLogo {
+  position: relative;
+  height: 100%;
+  width: 8rem;
+  float: right;
+  background: royalblue;
+}
+.mainContainer .guestContainer .header .plusLogo .add {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .guestContainer .header .settings {
+  position: relative;
+  float: right;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  height: 3rem;
+  width: 3rem;
+  background-image: url("../images/settings.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.mainContainer .guestContainer .header .admin {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  line-height: 6rem;
+  margin-right: 1rem;
+}
+.mainContainer .guestContainer .header .admin .name {
+  color: #4183D7;
+  font-size: 1.5rem;
+}
+.mainContainer .guestContainer .header .admin .role {
+  color: gray;
+  font-size: 1.5rem;
+}
+.mainContainer .guestContainer .options {
+  position: absolute;
+  width: 100%;
+  top: 6rem;
+  height: 6rem;
+  background: white;
+  border-bottom: 1px solid #d8d9da;
+  box-sizing: border-box;
+}
+.mainContainer .guestContainer .options .option {
+  position: relative;
+  float: left;
+  font-size: 1.5rem;
+  color: gray;
+  line-height: 6rem;
+  text-align: center;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.mainContainer .guestContainer .contentContainer {
+  position: absolute;
+  width: 100%;
+  top: 12rem;
+  bottom: 0;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer {
+  position: absolute;
+  height: 100%;
+  width: 40rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .search {
+  position: absolute;
+  height: 5.25rem;
+  width: 34rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .search .inputName {
+  position: absolute;
+  height: 3.5rem;
+  width: 28rem;
+  border-radius: 4rem;
+  border: 1px solid darkgray;
+  outline: none;
+  bottom: .5rem;
+  left: 50%;
+  font-size: 1.5rem;
+  transform: translate(-50%);
+  padding-left: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .search .dropArrow {
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  right: 4.5rem;
+  top: 2.7rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .usersList {
+  position: absolute;
+  top: 5.25rem;
+  bottom: 0;
+  width: 34rem;
+  overflow-y: auto;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .usersList .userNameAndPhone {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  cursor: pointer;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .usersList .userNameAndPhone .userName {
+  position: relative;
+  font-size: 1.5rem;
+  float: left;
+  margin-left: 3rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .usersList .userNameAndPhone .userPhone {
+  position: relative;
+  font-size: 1.3rem;
+  float: right;
+  color: gray;
+  margin-right: 3rem;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .usersList .userNameAndPhone:hover {
+  background: #4183D7;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .alphabetsBar {
+  position: absolute;
+  left: 34rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: whitesmoke;
+  font-size: 1.3rem;
+  color: gray;
+  padding-top: .5rem;
+  box-sizing: border-box;
+  border-right: 1px solid #d8d9da;
+}
+.mainContainer .guestContainer .contentContainer .usersContainer .alphabetsBar .alphabet {
+  position: relative;
+  width: 1.9rem;
+  height: 1.9rem;
+  text-align: center;
+  line-height: 1.9rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  border-radius: .6rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats {
+  position: absolute;
+  height: 100%;
+  left: 40rem;
+  right: 30rem;
+  box-sizing: border-box;
+  border-right: 1px solid #d8d9da;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 27rem;
+  border-bottom: 1px solid #d8d9da;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .selectedUserInfo {
+  position: absolute;
+  height: 4rem;
+  width: auto;
+  left: 3rem;
+  top: 1.5rem;
+  line-height: 4rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .selectedUserInfo .name {
+  position: relative;
+  height: 100%;
+  width: auto;
+  float: left;
+  font-size: 1.5rem;
+  color: #4183D7;
+  font-weight: bold;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .selectedUserInfo .position {
+  position: relative;
+  background: gray;
+  border-radius: .5rem;
+  font-size: 0.8rem;
+  color: white;
+  height: 1.3rem;
+  margin-top: 1.3rem;
+  margin-left: .5rem;
+  width: 5rem;
+  line-height: 1.3rem;
+  text-align: center;
+  display: inline-block;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .review {
+  position: absolute;
+  height: 2rem;
+  top: 2.5rem;
+  width: 17rem;
+  right: 3rem;
+  line-height: 2rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .review .text {
+  color: gray;
+  font: 1.3rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .review .rating {
+  position: relative;
+  float: right;
+  height: 100%;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .graphImage {
+  position: absolute;
+  height: 15rem;
+  width: 15rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .reservation {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: auto;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .reservation .circle {
+  position: relative;
+  float: left;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: .2rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: royalblue;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .reservation .number {
+  line-height: 2rem;
+  color: royalblue;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .reservation .text {
+  line-height: 2rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .walkins {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: auto;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .walkins .circle {
+  position: relative;
+  float: left;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: .2rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: green;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .walkins .number {
+  line-height: 2rem;
+  color: green;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .walkins .text {
+  line-height: 2rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .cancelation {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: auto;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .cancelation .circle {
+  position: relative;
+  float: left;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: .2rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .cancelation .number {
+  line-height: 2rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .graphContainer .visits .cancelation .text {
+  line-height: 2rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences {
+  position: absolute;
+  width: 100%;
+  height: 27rem;
+  bottom: 0;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .seatingAndFood {
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d8d9da;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .seatingAndFood .prefrences {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  font-size: 1.3rem;
+  color: gray;
+  left: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .seatingAndFood .seats {
+  position: absolute;
+  left: 14rem;
+  width: 38rem;
+  height: 2rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .seatingAndFood .seats .seat {
+  position: relative;
+  float: left;
+  height: 2rem;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #4183D7;
+  font-size: 1.3rem;
+  margin-left: .5rem;
+  border: 1px solid gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .seatingAndFood .addSeat {
+  position: absolute;
+  right: 1rem;
+  height: 2rem;
+  width: 3rem;
+  border-radius: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  line-height: 1.7rem;
+  color: #4183D7;
+  font-size: 3rem;
+  border: 1px solid royalblue;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory {
+  position: relative;
+  width: 100%;
+  height: 9rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d8d9da;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .event {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  font-size: 1.3rem;
+  color: gray;
+  left: 1rem;
+  top: 25%;
+  transform: translate(0, -25%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer {
+  position: absolute;
+  left: 14.6rem;
+  width: 38rem;
+  height: 6rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection .eventName {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding-top: .2 rem;
+  padding-bottom: .2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection .visits {
+  position: relative;
+  float: left;
+  margin-left: 4rem;
+  line-height: 3rem;
+  font-size: 1.3rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection .visitNum {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding: .3rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .5rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection .add {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding: .3rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .7rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .topSection .minus {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .7rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection .eventName {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection .visits {
+  position: relative;
+  float: left;
+  line-height: 3rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  color: gray;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection .visitNum {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding: .3rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .5rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection .add {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding: .3rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .7rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .eventsContainer .bottomSection .minus {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  float: left;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  font-size: 1.3rem;
+  color: #4183D7;
+  margin-left: .7rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .eventHistory .addSeat {
+  position: absolute;
+  right: 1rem;
+  height: 2rem;
+  width: 3rem;
+  border-radius: 1rem;
+  top: 25%;
+  transform: translate(0, -25%);
+  text-align: center;
+  line-height: 1.7rem;
+  color: #4183D7;
+  font-size: 3rem;
+  border: 1px solid royalblue;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .userTags {
+  position: relative;
+  width: 100%;
+  height: 6rem;
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .userTags .prefrences {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  font-size: 1.3rem;
+  color: gray;
+  left: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .userTags .tags {
+  position: absolute;
+  left: 14rem;
+  width: 38rem;
+  height: 2rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainContainer .guestContainer .contentContainer .userStats .userPrefrences .userTags .tags .tag {
+  position: relative;
+  float: left;
+  height: 2rem;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: 2rem;
+  color: green;
+  font-size: 1.3rem;
+  margin-left: .5rem;
+  border: 1px solid gray;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 30rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo {
+  position: absolute;
+  width: 100%;
+  height: 15rem;
+  background: whitesmoke;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .heading {
+  position: relative;
+  width: 100%;
+  height: 3.5rem;
+  text-align: left;
+  line-height: 3.5rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .info {
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .mail {
+  position: relative;
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .mail .mailTag {
+  position: relative;
+  color: #4183D7;
+  font-size: 1.3rem;
+  float: left;
+  margin-left: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .mail .mailAddress {
+  position: relative;
+  font-size: 1.3rem;
+  float: left;
+  margin-left: 2rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .phone {
+  position: relative;
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .phone .phoneTag {
+  position: relative;
+  color: #4183D7;
+  font-size: 1.3rem;
+  float: left;
+  margin-left: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .userInfo .phone .phoneNumber {
+  position: relative;
+  font-size: 1.3rem;
+  float: left;
+  margin-left: 2rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents {
+  position: absolute;
+  width: 100%;
+  top: 15rem;
+  height: 15rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .heading {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  text-align: left;
+  line-height: 3.5rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events .eventBar {
+  position: relative;
+  width: 28rem;
+  height: 3rem;
+  margin-top: .75rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events .eventBar .circle {
+  position: relative;
+  height: .5rem;
+  width: .5rem;
+  border: solid 3px #ff6851;
+  border-radius: 20px;
+  float: left;
+  margin-top: .9rem;
+  margin-left: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events .eventBar .time {
+  position: relative;
+  height: 2rem;
+  width: 3.4rem;
+  float: left;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  border-radius: 5px;
+  line-height: 2rem;
+  text-align: center;
+  background: #ff6851;
+  box-sizing: border-box;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  color: white;
+  font-size: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events .eventBar .date {
+  position: relative;
+  height: 100%;
+  width: auto;
+  float: left;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  color: gray;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .upcomingEvents .events .eventBar .tableNum {
+  position: relative;
+  height: 100%;
+  width: auto;
+  float: right;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  color: gray;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory {
+  position: absolute;
+  width: 100%;
+  top: 30rem;
+  bottom: 0;
+  background: whitesmoke;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .heading {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  text-align: left;
+  line-height: 3.5rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer {
+  position: absolute;
+  top: 3rem;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer .historyBar {
+  position: relative;
+  width: 28rem;
+  height: 3.2rem;
+  margin-top: .75rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer .historyBar .circle {
+  position: relative;
+  height: .5rem;
+  width: .5rem;
+  border: solid 3px #ff6851;
+  border-radius: 20px;
+  float: left;
+  margin-top: .9rem;
+  margin-left: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer .historyBar .time {
+  position: relative;
+  height: 2rem;
+  width: 3.4rem;
+  float: left;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  border-radius: 5px;
+  line-height: 2rem;
+  text-align: center;
+  background: #ff6851;
+  box-sizing: border-box;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  color: white;
+  font-size: 1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer .historyBar .date {
+  position: relative;
+  height: 100%;
+  width: auto;
+  float: left;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  color: gray;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+.mainContainer .guestContainer .contentContainer .userInfoContainer .diningHistory .historyContainer .historyBar .tableNum {
+  position: relative;
+  height: 100%;
+  width: auto;
+  float: right;
+  margin-top: .4rem;
+  margin-left: .6rem;
+  color: gray;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}

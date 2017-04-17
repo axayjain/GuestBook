@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <link rel="stylesheet" href="../css/screen.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="menu">
+            <div class="logo">
+                <img src="../images/logo.png" alt="" class="headerLogo">
+            </div>
+            <div class="optionsContainer">
+                <img src="../images/shirt.png" alt="" class="optionLogo">
+                <img src="../images/edit.png" alt="" class="optionLogo">
+                <img src="../images/shirt.png" alt="" class="optionLogo">
+                <img src="../images/dollar.png" alt="" class="optionLogo">
+            </div>
+            <img src="../images/burger.png" alt="" class="footerLogo">
+        </div>
+        <div class="guestContainer">
+            <div class="header">
+                <div class="productName">Guestbook</div>
+                <div class="plusLogo">
+                    <img src="../images/add.png" alt="" class="add">
+                </div>
+                <div class="settings"></div>
+                <div class="admin">
+                    <span class="name">Admin Name</span><span class="role">(Adminstrator)</span>
+                </div>
+            </div>
+            <div class="options">
+                <div class="option alphabetOrder">Alphabetically</div>
+                <div class="option latestAdded">Latest Added</div>
+                <div class="option vip">VIP</div>
+            </div>
+            <div class="contentContainer">
+                <div class="usersContainer">
+                    <div class="search">
+                        <input type="text" class="inputName" placeholder="Search                                    Phone">
+                        <img src="../images/drop-arrow.png" alt="" class="dropArrow">
+                    </div>
+                    <div class="usersList">
+                        <!--userBar Tmplate-->
+                    </div>
+                    <div class="alphabetsBar">
+                        <!--alphabetsTemplate-->
+                    </div>
+                </div>
+                <div class="userStats">
+                    <div class="graphContainer">
+                        <div class="selectedUserInfo">
+                            <div class="name">Felisha Oshiro</div>
+                            <span class="position">INVESTOR</span>
+                        </div>
+                        <div class="review">
+                            <span class="text">Left 3 reviews</span>
+                            <img src="../images/stars.jpg" alt="" class="rating">
+                        </div>
+                        <img src="../images/pieChart.png" alt="" class="graphImage">
+                        <div class="visits">
+                            <div class="reservation">
+                                <div class="circle"></div>
+                                <span class="number">3</span><span class="text"> Reservations</span>
+                            </div>
+                            <div class="walkins">
+                                <div class="circle"></div>
+                                <span class="number">2</span><span class="text"> Walk-Ins</span>
+                            </div>
+                            <div class="cancelation">
+                                <div class="circle"></div>
+                                <span class="number">1</span><span class="text"> Cancelation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userPrefrences">
+                        <div class="seatingAndFood">
+                            <div class="prefrences">Seating Prefrence</div>
+                            <div class="seats">
+                                <div class="seat">3</div>
+                                <div class="seat">11</div>
+                                <div class="seat">27</div>
+                            </div>
+                            <div class="addSeat">+</div>
+                        </div>
+                        <div class="seatingAndFood">
+                            <div class="prefrences">Food Prefrence</div>
+                            <div class="seats">
+                                <div class="seat">Tuna Salad</div>
+                                <div class="seat">Ham Burger</div>
+                                <div class="seat">Vegetarian Pizza</div>
+                            </div>
+                            <div class="addSeat">+</div>
+                        </div>
+                        <div class="eventHistory">
+                            <div class="event">Event History</div>
+                            <div class="eventsContainer">
+                                <div class="topSection">
+                                    <span class="eventName">Happy Hours</span>
+                                    <span class="visits">visits</span>
+                                    <span class="visitNum">10</span>
+                                    <span class="add">+</span>
+                                    <span class="minus">-</span>
+                                </div>
+                                <div class="bottomSection">
+                                    <span class="eventName">Halloween Party</span>
+                                    <span class="visits">visits</span>
+                                    <span class="visitNum">10</span>
+                                    <span class="add">+</span>
+                                    <span class="minus">-</span>
+                                </div>
+                            </div>
+                            <div class="addSeat">+</div>
+                        </div>
+                        <div class="userTags">
+                            <div class="prefrences">User Tags</div>
+                            <div class="tags">
+                                <div class="tag">Seafood</div>
+                                <div class="tag">Football</div>
+                                <div class="tag">Baseball</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="userInfoContainer">
+                    <div class="userInfo">
+                        <!--userInfo Template-->
+                    </div>
+                    <div class="upcomingEvents">
+                        <div class="heading">UPCOMING EVENTS</div>
+                        <div class="events">
+                            <!--Events Template-->
+                        </div>
+                    </div>
+                    <div class="diningHistory">
+                        <div class="heading">DINING HISTORY</div>
+                        <div class="historyContainer">
+                            <!--historyTemplate-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Templates-->
+    <script id="userBarTemplate" type="text/x-jsrender">
+    {^{if isVip== ~filter || ~filter==''}}
+        <div class="userNameAndPhone">
+            <span class="userName">{{:name}}</span>
+            <span class="userPhone">{{:mobileNumber}}</span>
+        </div>
+        {{/if}}
+    </script>
+    <!--userInfo Template-->
+    <script id="userInfoTemplate" type="text/x-jsrender">
+        <div class="heading">USER INFO</div>
+        <div class="info">{{:text}}</div>
+        <div class="mail">
+            <span class="mailTag">Mail</span>
+            <span class="mailAddress">{{:emailId}}</span>
+        </div>
+        <div class="phone">
+            <span class="phoneTag">Phone</span>
+            <span class="phoneNumber">{{:mobileNumber}}</span>
+        </div>
+    </script>
+    <!--events template-->
+    <script id="eventsTemplate" type="text/x-jsrender">
+        {^{for upComingEvents}}
+        <div class="eventBar">
+            <div class="circle"></div>
+            <div class="time">{{:time}}</div>
+            <div class="date">{{:date}}</div>
+            <div class="tableNum">{{:tableNumber}}</div>
+        </div>
+        {{/for}}
+    </script>
+    <!--dining History Template-->
+    <script id="historyTemplate" type="text/x-jsrender">
+        {^{for dinningEvents}}
+        <div class="historyBar">
+            {{if visit=='reserve'}}
+            <div class="circle" style="border: solid 3px royalblue"></div>
+            <div class="time" style="background: royalblue">{{:time}}</div>
+            {{else visit=='cancel'}}
+            <div class="circle" style="border: solid 3px gray"></div>
+            <div class="time" style="background: gray">{{:time}}</div>
+            {{else}}
+            <div class="circle" style="border: solid 3px green"></div>
+            <div class="time" style="background: green">{{:time}}</div>
+            {{/if}}
+            <div class="date">{{:date}}</div>
+            <div class="tableNum">{{:tableNumber}}</div>
+        </div>
+        {{/for}}
+    </script>
+    <!--alphabet Template-->
+    <script id="alphabetsTemplate" type="text/x-jsrender">
+        <div class="alphabet" data-link="{on ~selectAlphabet}">{{:letter}}</div>
+    </script>
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/jsviews.js"></script>
+    <script type="text/javascript" src="../scripts/JSLINQ.js"></script>
+    <script type="text/javascript" src="../js/baseAkshay.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+</body>
+
+</html>
